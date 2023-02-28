@@ -47,3 +47,4 @@
 1. Установить Docker, Docker-compose и NodeJS
 2. Запустить ```docker-compose -f docker-compose.dev.yaml up -d```
 3. Сделать пункты 5 и 6 из списка выше
+
