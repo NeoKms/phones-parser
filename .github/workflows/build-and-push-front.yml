@@ -1,9 +1,5 @@
 name: Docker Image CI
 on:
-  push:
-    branches: [ "main" ]
-    paths:
-      - front/**
   pull_request:
     branches: [ "main" ]
     paths:
