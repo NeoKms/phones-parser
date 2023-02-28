@@ -38,9 +38,11 @@ app
             tempFileDir: U_DIRS.tmp,
         })
     );
+
 //init sentry
 require("./src/helpers/sentry")(app);
 // end
+
 require("./src/routes")(app);
 app.use(Sentry.Handlers.errorHandler());
 const logger = require('./src/helpers/logger');
