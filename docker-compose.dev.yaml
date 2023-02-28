@@ -1,0 +1,30 @@
+version: '3'
+services:
+  phone_redis_dev:
+    image: redis:latest
+    container_name: phone_redis_dev
+    ports:
+      - "30054:6379"
+  phone_mariadb_dev:
+    image: mariadb:latest
+    container_name: phone_mariadb_dev
+    environment:
+      MARIADB_USER: user1
+      MARIADB_PASSWORD: user1
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: db_parser
+    ports:
+      - "30055:3306"
+    volumes:
+      - ./mariadb_parser_data_dev:/var/lib/mysql
+  phone_rabbit_dev:
+    image: rabbitmq:3-management
+    container_name: phone_rabbit_dev
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: root
+    ports:
+      - "30056:5672"
+      - "30156:15672"
+    volumes:
+      - ./rabbit_data_dev:/var/lib/rabbitmq

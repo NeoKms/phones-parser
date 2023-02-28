@@ -1,0 +1,6 @@
+version: '3'
+services:
+  phone_api:
+    image: upachko/phone_api:latest
+    build:
+      dockerfile: Dockerfile

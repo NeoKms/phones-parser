@@ -1,0 +1,6 @@
+version: '3'
+services:
+  phone_front:
+    image: upachko/phone_front:latest
+    build:
+      dockerfile: Dockerfile
