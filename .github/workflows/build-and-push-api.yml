@@ -2,14 +2,14 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
-    paths: 
+    paths:
       - api/**
   pull_request:
     branches: [ "main" ]
-    paths: 
+    paths:
       - api/**
 jobs:
-  build-and-push:
+  build-and-push-api:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
