@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "file": {
+      "type": "object"
+    },
+    "insert": {
+      "enum": ["0", "1"]
+    }
+  },
+  "required": ["file"],
+  "additionalProperties": false
+}

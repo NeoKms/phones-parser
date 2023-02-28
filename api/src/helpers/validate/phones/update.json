@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "phone": {
+      "minLength": 10,
+      "type": "string"
+    },
+    "auto_pay": {
+      "anyOf": [
+        {"type": "boolean"},
+        {"enum": [0,1]}
+      ]
+    },
+    "password_id": {
+      "anyOf": [
+        {"type": "number"},
+        {"type": "null"}
+      ]
+    },
+    "min_value": {
+      "type": "number"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "sip": {
+      "type": "string"
+    },
+    "qiwi_token_id": {
+      "anyOf": [
+        {"type": "number"},
+        {"type": "null"}
+      ]
+    }
+  },
+  "required": ["phone"],
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "token": {
+      "minLength": 15,
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "limit": {
+      "anyOf": [
+        {"type": "number"},
+        {"type": "null"}
+      ]
+    }
+  },
+  "required": ["token"],
+  "additionalProperties": false
+}

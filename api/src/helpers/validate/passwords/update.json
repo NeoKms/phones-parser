@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "string"
+    },
+    "operator": {
+      "enum": ["megafon", "mts", "tele2","beeline"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "required": ["id","value"],
+  "additionalProperties": false,
+  "validatePasswordForSim":true
+}

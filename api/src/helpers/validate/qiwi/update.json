@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "limit": {
+      "anyOf": [
+        {"type": "number"},
+        {"type": "null"}
+      ]
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}
