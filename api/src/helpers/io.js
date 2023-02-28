@@ -28,7 +28,7 @@ class IoConnection {
     const self = this;
     if (this.socket) return this.socket;
 
-    const connUri = WS.HOST+":"+WS.PORT;
+    const connUri = WS.HOST+":"+WS.EXT;
     this.socket = io(connUri, {transports: ["websocket"]});
 
     this.socket.on("connect", () => {

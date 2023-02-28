@@ -61,6 +61,7 @@ config.U_DIRS = {
 config.WS = {
     HOST: env.WS_HOST,
     PORT: env.WS_PORT || 9000,
+    EXT: env.WS_PORT_EXT || env.WS_PORT || 9000,
 };
 
 config.PORT = env.PORT;
