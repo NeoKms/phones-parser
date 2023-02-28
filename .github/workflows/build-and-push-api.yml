@@ -9,8 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: CD dir
+      run: cd api
     - name: Build the Docker image
-      run: docker build . --file api/Dockerfile --tag upachko/phone_api:$(date +%s) --tag upachko/phone_api:latest
+      run: docker build . --file Dockerfile --tag upachko/phone_api:$(date +%s) --tag upachko/phone_api:latest
     - name: Login to Docker Hub
       uses: docker/login-action@v2
       with:
